@@ -6,10 +6,25 @@ Setting Up Custom Router
     - After installing a new SSD I loaded Opnsense Router OS on the drive
 
 ISP Equipment Bridgemode
-    -
+    -After Opensense router was successfully setup I needed to turn my current isp device into bridge mode
+    -First I needed to designate my custom router as the new WAN device using the mac address
+    -Next I disabled the firewall/NAT for my ISP router
+    -I plugged my computer into the LAN port on my custom router and sure enough DHCP was handled properly and I had internet access
 
 Setting Up Unifi Switch & Access Point
-    -
+    -Since I only had a dual port NIC on my custom router I needed a switch
+    -I got a used Unifi switch that also had 2 SFP ports as a bonus
+    -The switch had POE capabilities which was nice since I did not need to use a POE injector for my Unifi AP
+    -Within my router I needed to create the interface that the switch would use and designate it as my LAN
+    -I Used cloudflare as my DNS server (1.1.1.1 & 1.0.0.1)
+    -Once I had the unifi switch and ap plugged into my router I used my computer to adopt the two unifi device into my Unifi controller
+    -I setup my 
 
 Creating Vlan
-    -
+    -First I need to go to my VLAN settings and create a new VLAN and I used the physical LAN interface as the parent interface
+    -VLAN tag 2 was assigned
+    -DHCP was setup for IVP4
+    -The inteface was enabled
+    -Firewall rules were established to allow the IPv4 and 6 taffic to flow over the interface
+    -Next the VLAN was created on the Unifi switch tag 2
+    -A new wireless network was then created that utilized the VLAN network.
