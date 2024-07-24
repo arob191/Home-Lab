@@ -10,10 +10,10 @@ Setting Up Custom Router
 
 ISP Equipment Bridgemode
     
-    -After Opensense router was successfully setup I needed to turn my current isp device into bridge mode
-    -First I needed to designate my custom router as the new WAN device using the mac address
-    -Next I disabled the firewall/NAT for my ISP router
-    -I plugged my computer into the LAN port on my custom router and sure enough DHCP was handled properly and I had internet access
+-After Opensense router was successfully setup I needed to turn my current isp device into bridge mode
+-First I needed to designate my custom router as the new WAN device using the mac address
+-Next I disabled the firewall/NAT for my ISP router
+-I plugged my computer into the LAN port on my custom router and sure enough DHCP was handled properly and I had internet access
 
 Setting Up Unifi Switch & Access Point
     
